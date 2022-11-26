@@ -6,7 +6,7 @@ output "cloudblock-output" {
 #############
 
 ## SSH ##
-ssh ubuntu@${digitalocean_droplet.nc-droplet.ipv4_address}
+ssh root@${digitalocean_droplet.nc-droplet.ipv4_address}
 
 ## WebUI ##
 ${var.enable_duckdns == 1 && var.web_port == "443" ? "https://${var.duckdns_domain}/nc/" : ""}${var.enable_duckdns == 1 && var.web_port != "443" ? "https://${var.duckdns_domain}:${var.web_port}/nc/" : ""}${var.enable_duckdns == 0 && var.web_port == "443" ? "https://${digitalocean_droplet.nc-droplet.ipv4_address}/" : ""}${var.enable_duckdns == 0 && var.web_port != "443" ? "https://${digitalocean_droplet.nc-droplet.ipv4_address}:${var.web_port}/" : ""}
@@ -14,13 +14,13 @@ ${var.enable_duckdns == 1 && var.web_port == "443" ? "https://${var.duckdns_doma
 ## ############## ##
 ## One Time Setup ##
 ## ############## ##
-scp ${var.nc_prefix}-setup-${random_string.nc-random.result}.sh ubuntu@${digitalocean_droplet.nc-droplet.ipv4_address}:~/${var.nc_prefix}-setup-${random_string.nc-random.result}.sh
-ssh ubuntu@${digitalocean_droplet.nc-droplet.ipv4_address} "chmod +x ${var.nc_prefix}-setup-${random_string.nc-random.result}.sh && ~/${var.nc_prefix}-setup-${random_string.nc-random.result}.sh"
+scp ${var.nc_prefix}-setup-${random_string.nc-random.result}.sh root@${digitalocean_droplet.nc-droplet.ipv4_address}:~/${var.nc_prefix}-setup-${random_string.nc-random.result}.sh
+ssh root@${digitalocean_droplet.nc-droplet.ipv4_address} "chmod +x ${var.nc_prefix}-setup-${random_string.nc-random.result}.sh && ~/${var.nc_prefix}-setup-${random_string.nc-random.result}.sh"
 
 ## ################### ##
 ## Update Instructions ##
 ## ################### ##
-ssh ubuntu@${digitalocean_droplet.nc-droplet.ipv4_address}
+ssh root@${digitalocean_droplet.nc-droplet.ipv4_address}
 
 # If updating containers
 # remove the old containers - this brings down the service until ansible is re-applied.
