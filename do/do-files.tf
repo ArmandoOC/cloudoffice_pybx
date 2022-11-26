@@ -37,6 +37,8 @@ sudo tee /opt/cloudoffice-ansible-state.sh << EOM
 apt-get update
 # Install pip3 and git
 DEBIAN_FRONTEND=noninteractive apt-get -y install python3-pip git
+#Upgrade pip                     #added
+sudo pip3 install --upgrade pip  #added
 # Install ansible
 pip3 install --upgrade ansible
 # Make the project directory
