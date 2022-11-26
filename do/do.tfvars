@@ -20,7 +20,7 @@ do_image  = "ubuntu-22-04-x64"
 do_size     = "s-1vcpu-1gb"
 do_cidr     = "10.10.13.0/24"
 nc_prefix   = "cloudoffice"
-project_url = "https://github.com/chadgeary/cloudoffice"
+project_url = "https://github.com/ArmandoOC/cloudoffice_pybx" 
 
 # Change if ip/port settings would interfere with existing networks, should all be within a /24
 web_port              = "443"
