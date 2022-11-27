@@ -43,8 +43,6 @@ sudo pip3 install --upgrade pip  #added
 #pip3 install --upgrade ansible
 #pip3 install --upgrade ansible cryptography pyopenssl
 pip3 install --upgrade ansible
-pip3 install cryptography
-pip3 install pyopenssl
 # Make the project directory
 mkdir -p /opt/git/cloudoffice
 # Clone project into project directory
