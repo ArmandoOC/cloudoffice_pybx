@@ -2,7 +2,6 @@ import hcl2
 import json
 import sys
 import os
-import time
 import subprocess as sp
 
 # total arguments
@@ -114,9 +113,6 @@ def create():
 
         output = sp.getoutput('python3 extractRemoteCommandsToExecute.py')
         print(output)
-
-        #wait 5 minutes while droplet is being created
-        time.sleep(300)
 
         output = sp.getoutput('bash executeOnremote.sh ')
         print(output)
