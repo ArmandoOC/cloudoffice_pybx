@@ -117,7 +117,7 @@ def create():
         #output = sp.getoutput('sudo bash executeOnremote.sh')
         #print(output)
 
-        rc = sp.call("sleep.sh")
+        rc = sp.call("executeOnremote.sh")
 
         
         print("****************************************************************************")
