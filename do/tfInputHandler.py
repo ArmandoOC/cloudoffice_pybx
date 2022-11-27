@@ -114,12 +114,12 @@ def create():
         output = sp.getoutput('python3 extractRemoteCommandsToExecute.py')
         print(output)
         
-        #output = sp.getoutput('sudo bash executeOnremote.sh')
-        #print(output)
-        print("start")
-        sp.call("./executeOnremote.sh", shell=True)
-        print("end")
+        output = sp.getoutput('sudo bash executeOnremote.sh')
+        print(output)
         
+        output = sp.getoutput('sudo bash executeOnremote.sh')
+        print(output)
+
         print("****************************************************************************")
         print("****************************************************************************")
         print("****************************************************************************")
