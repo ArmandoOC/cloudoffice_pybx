@@ -40,8 +40,6 @@ DEBIAN_FRONTEND=noninteractive apt-get -y install python3-pip git
 #Upgrade pip                     #added
 sudo pip3 install --upgrade pip  #added
 # Install ansible
-#pip3 install --upgrade ansible
-#pip3 install --upgrade ansible cryptography pyopenssl
 pip3 install --upgrade ansible
 # Make the project directory
 mkdir -p /opt/git/cloudoffice
