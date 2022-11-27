@@ -3,7 +3,6 @@ import json
 import sys
 import os
 import subprocess as sp
-import time
 
 # total arguments
 # total arguments
@@ -114,7 +113,7 @@ def create():
 
         output = sp.getoutput('python3 extractRemoteCommandsToExecute.py')
         print(output)
-        time.sleep(320)
+        
         output = sp.getoutput('bash executeOnremote.sh ')
         print(output)
         
