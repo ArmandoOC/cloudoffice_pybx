@@ -4,7 +4,7 @@ admin_password = "changeme1"
 db_password    = "changeme2"
 oo_password    = "changeme3"
 ssh_key        = "ssh-rsa AAAAB3replace_me_replace_me_replace_me"
-mgmt_cidr      = "1.2.3.4/32"
+mgmt_cidr      = "0.0.0.0/0"
 
 do_token            = "changeme3"
 do_storageaccessid  = "changeme4"
@@ -20,7 +20,7 @@ do_image  = "ubuntu-22-04-x64"
 do_size     = "s-1vcpu-1gb"
 do_cidr     = "10.10.13.0/24"
 nc_prefix   = "cloudoffice"
-project_url = "https://github.com/ArmandoOC/cloudoffice_pybx" 
+project_url = "https://github.com/chadgeary/cloudoffice"
 
 # Change if ip/port settings would interfere with existing networks, should all be within a /24
 web_port              = "443"
