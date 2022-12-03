@@ -122,7 +122,7 @@ def create():
         #output = out("sudo executeOnremote.sh")
         #print(output)
         
-        output = out("sudo bash executeOnremote.sh")
+        output = sp.getoutput('bash executeOnremote.sh')
         print(output)
 
         print("****************************************************************************")
