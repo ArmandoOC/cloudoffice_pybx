@@ -3,6 +3,7 @@ import json
 import sys
 import os
 import subprocess as sp
+from subprocess import PIPE, run
 
 # total arguments
 # total arguments
@@ -25,6 +26,10 @@ for i in range(1, n):
      
 print("\n\nResult:", Sum)
 """
+
+def out(command):
+	result = run(command, stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
+	return result.stdout
 
 def create():
     output = sp.getoutput('bash createsshkeygen.sh')
@@ -114,12 +119,9 @@ def create():
         output = sp.getoutput('python3 extractRemoteCommandsToExecute.py')
         print(output)
         
-        
-        output = sp.getoutput('chmod u+rx executeOnremote.sh')
+        output = out("sudo executeOnremote.sh")
         print(output)
         
-        output = sp.getoutput('sudo bash executeOnremote.sh')
-        print(output)
 
         print("****************************************************************************")
         print("****************************************************************************")
