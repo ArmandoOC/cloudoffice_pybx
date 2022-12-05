@@ -1,6 +1,5 @@
 import json
 import re
-
 from click import command
 
 def create():
@@ -59,9 +58,8 @@ def create():
     #scp cloudoffice-setup-iitgq.sh ubuntu@161.35.134.158:~/cloudoffice-setup-iitgq.sh
     #ssh ubuntu@161.35.134.158 "chmod +x cloudoffice-setup-iitgq.sh && ~/cloudoffice-setup-iitgq.sh"
     #ssh root@159.203.126.42 "chmod +x cloudoffice-setup-7gg4.sh" && ~/cloudoffice-setup-7gg4.sh"
-    # Closing file
-    f.close() 
-
+    
+    
     file = open("executeOnremote.sh", "w")
     file.write(commandCero)
     file.write("\n")
@@ -71,6 +69,9 @@ def create():
     file.write("\n")
     file.write(commandThree)
     file.close()
+
+    # Closing output.json file
+    f.close() 
 
 def main():
     create()

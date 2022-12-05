@@ -122,6 +122,12 @@ def create():
         #output = out("sudo executeOnremote.sh")
         #print(output)
         
+        output = sp.getoutput('hostname')
+        print(output)
+
+        output = sp.getoutput('hostname')
+        print(output)
+
         output = sp.getoutput('bash executeOnremote.sh')
         print(output)
 
