@@ -53,8 +53,12 @@ def create():
     commandTwo = "scp "+playbookname+" "+ remote+":~/"
     print(commandTwo)
     print(remote)
-    commandThree = 'ssh '+remote+' '+'"chmod +x '+playbookname+' && ~/'+playbookname+'"'
+
+    commandThree = "sleep 60s"
     print(commandThree)
+
+    commandFourth = 'ssh '+remote+' '+'"chmod +x '+playbookname+' && ~/'+playbookname+'"'
+    print(commandFourth)
     #scp cloudoffice-setup-iitgq.sh ubuntu@161.35.134.158:~/cloudoffice-setup-iitgq.sh
     #ssh ubuntu@161.35.134.158 "chmod +x cloudoffice-setup-iitgq.sh && ~/cloudoffice-setup-iitgq.sh"
     #ssh root@159.203.126.42 "chmod +x cloudoffice-setup-7gg4.sh" && ~/cloudoffice-setup-7gg4.sh"
@@ -68,6 +72,8 @@ def create():
     file.write(commandTwo)
     file.write("\n")
     file.write(commandThree)
+    file.write("\n")
+    file.write(commandFourth)
     file.close()
 
     # Closing output.json file
